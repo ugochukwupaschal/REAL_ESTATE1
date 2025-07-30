@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../font-awesome/css/all.min.css">
+    <!-- boot link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- boot link end-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+/>
+     <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap" rel="stylesheet">
+     <!-- google font ends -->
+<!-- carousel link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<!-- carousel link end-->
+    <!-- boot css -->
+
+<!-- inter font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<!-- inter font end -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Owl Carousel CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+     
+     <!-- jQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- Owl Carousel JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+     
+    <title>property - real estate</title>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="logo">
+<h3 class="logotext">Heaven Gate</h3>
+        </div>
+       
+       <div class="logsign">
+        <div class="lohin">
+            <a href="./login.html">Login</a>
+        </div>
+        <div class="signin">
+            <a href="./signup.html">sign up</a>
+        </div>
+       </div>
+       <span onclick="openNav()" class="cs">MENU</span>
+    </header>
+    <nav class="floating-navbar">
+        <a href="../../index.html" class="floatnavlink" > <span class="icon"><i class="fas fa-home"></i></span>Home</a>
+        <a href="./about.html" class="floatnavlink"><span class="icon"><i class="fas fa-info-circle"></i></span>About</a>
+        <a href="./property.html" class="floatnavlink"><span class="icon"><i class="fas fa-building"></i></span>Property</a>
+        <a href="./contact.html" class="floatnavlink"><span class="icon"><i class="fas fa fa-phone "></i></span>Contact</a>
+    </nav>
+
+
+<!-- tab mode -->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="../../index.html">Home</a>
+    <a href="./about.html">About</a>
+    <a href="./property.html">Property</a>
+    <a href="./contact.html">Contact</a>
+  </div>
+  
+  <!-- Use any element to open the sidenav -->
+  
+<section class="banner">
+     <img src="../images/4372a7b0-cfcf-44a5-b037-a87c5b8b7ef7.jpg" alt="" class="babbed">
+
+    <div class="banner-text">
+        <h3>Featured Listings</h3>
+        <h4>Crafting Spaces That Inspires</h4>
+        <p>Browse our exclusive listings, showcasing stunning interiors, expansive layouts, and unique features like private gardens, rooftop terraces, or state-of-the-art facilities. Our properties blend comfort, style, and functionality to elevate your living or business experience.</p>
+    </div>
+</section>
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        } */
+
+        .container {
+           
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+.fd{
+ margin-top: 130px;
+}
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .property-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .property-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .property-card:hover .property-image {
+            transform: scale(1.05);
+        }
+
+        .property-info {
+            padding: 20px;
+        }
+
+        .property-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .property-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #27ae60;
+            margin-bottom: 15px;
+        }
+
+        .property-features {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            background: #3498db;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            /* backdrop-filter: blur(5px); */
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 3% auto;
+            padding: 0;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            color: #333;
+        }
+
+        .close-btn:hover {
+            background: white;
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .modal-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+
+        .modal-description {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            font-size: 1rem;
+            color: #444;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .features-list li::before {
+            content: "•";
+            color: #3498db;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+
+        .contact-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #00bcd4, #2196f3);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+            background: linear-gradient(135deg, #00acc1, #1e88e5);
+        }
+
+        .contact-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .properties-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: 5% auto;
+                width: 95%;
+            }
+            
+            .modal-body {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+<div class="fd">
+   <div class="container">
+        <h1>Our Properties</h1>
+        
+        <div class="properties-grid" id="propertiesGrid">
+            <!-- Properties will be generated by JavaScript -->
+        </div>
+    </div>
+
+
+    
+    <!-- Modal -->
+    <div id="propertyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img id="modalImage" src="" alt="" class="modal-image">
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <div id="modalPrice" class="modal-price"></div>
+                <p id="modalDescription" class="modal-description"></p>
+                <ul id="modalFeatures" class="features-list"></ul>
+                <button class="contact-btn" onclick="contactAgent()">Contact An Agent</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+ 
+
+    <script>
+        const properties = [
+            {
+                id: 1,
+                title: "Family Deluxe",
+                price: "$320,000",
+                image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Charming family home with traditional architecture and modern amenities in a peaceful neighborhood.",
+                features: ["4 Bedrooms", "3 Bathrooms", "Large Garden", "Garage", "Modern Kitchen", "Fireplace"]
+            },
+            {
+                id: 2,
+                title: "Trendy Urban Home",
+                price: "$320,000",
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Contemporary urban dwelling with sleek design and stunning city views perfect for modern living.",
+                features: ["3 Bedrooms", "2 Bathrooms", "Pool", "Modern Design", "City Views", "Smart Home Features"]
+            },
+            {
+                id: 3,
+                title: "Royale Garden",
+                price: "$320,000",
+                image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Elegant estate with beautiful gardens and luxurious finishes throughout every room.",
+                features: ["5 Bedrooms", "4 Bathrooms", "Garden", "Balcony", "Premium Finishes", "Security System"]
+            },
+            {
+                id: 4,
+                title: "Deluxe Riverside Home",
+                price: "$340,000",
+                image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Elegant riverside property offering both comfort and breathtaking scenery.",
+                features: ["2 King-size Beds", "Fast Internet Access", "Cozy and Cool Interior", "Luxury Bathroom with Bathtub", "Temperature-controlled Rooms"]
+            },
+            {
+                id: 5,
+                title: "Modern Villa Estate",
+                price: "$450,000",
+                image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Stunning modern villa with open floor plans and premium amenities for luxury living.",
+                features: ["4 Bedrooms", "3 Bathrooms", "Swimming Pool", "Home Theater", "Wine Cellar", "Smart Automation"]
+            },
+            {
+                id: 6,
+                title: "Cozy Suburban Retreat",
+                price: "$285,000",
+                image: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Perfect family home in quiet suburban setting with all modern conveniences.",
+                features: ["3 Bedrooms", "2 Bathrooms", "Backyard", "Updated Kitchen", "Hardwood Floors", "Central Air"]
+            },
+            {
+                id: 7,
+                title: "Luxury Penthouse Suite",
+                price: "$750,000",
+                image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Exclusive penthouse with panoramic city views and top-tier amenities.",
+                features: ["3 Bedrooms", "3 Bathrooms", "Rooftop Terrace", "City Views", "Concierge Service", "Premium Appliances"]
+            },
+            {
+                id: 8,
+                title: "Countryside Manor",
+                price: "$420,000",
+                image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Spacious countryside home with acres of land and rustic charm.",
+                features: ["5 Bedrooms", "3 Bathrooms", "Large Property", "Barn", "Country Kitchen", "Peaceful Setting"]
+            },
+            {
+                id: 9,
+                title: "Beachfront Paradise",
+                price: "$650,000",
+                image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description: "Stunning beachfront property with direct ocean access and breathtaking sunset views.",
+                features: ["4 Bedrooms", "3 Bathrooms", "Ocean Views", "Private Beach", "Deck", "Beach Access"]
+            }
+        ];
+
+        function generatePropertyCards() {
+            const grid = document.getElementById('propertiesGrid');
+            
+            properties.forEach(property => {
+                const card = document.createElement('div');
+                card.className = 'property-card';
+                card.onclick = () => openModal(property);
+                
+                card.innerHTML = `
+                    <img src="${property.image}" alt="${property.title}" class="property-image">
+                    <div class="property-info">
+                        <h3 class="property-title">${property.title}</h3>
+                        <div class="property-price">${property.price}</div>
+                        <div class="property-features">
+                           <i class="fas fa-wifi"></i>
+<i class="fas fa-bed"></i>
+<i class="fas fa-snowflake"></i>
+<i class="fas fa-shield-alt"></i>
+<i class="fas fa-bath"></i>
+<i class="fas fa-thermometer-half"></i>
+<i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        function openModal(property) {
+            const modal = document.getElementById('propertyModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalPrice = document.getElementById('modalPrice');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalFeatures = document.getElementById('modalFeatures');
+            
+            modalImage.src = property.image;
+            modalImage.alt = property.title;
+            modalTitle.textContent = property.title;
+            modalPrice.textContent = property.price;
+            modalDescription.textContent = property.description;
+            
+            modalFeatures.innerHTML = '';
+            property.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature;
+                modalFeatures.appendChild(li);
+            });
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('propertyModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function contactAgent() {
+            alert('Thank you for your interest! An agent will contact you shortly.');
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('propertyModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Initialize the page
+        generatePropertyCards();
+    </script>
+
+
+
+<!-- Newsletter Section -->
+<section class="newsletter-section">
+  <div class="newsletter-container">
+    <h2 class="newsletter-title">NEWSLETTER</h2>
+    <p class="newsletter-subtitle">Subscribe to our newsletter</p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">
+        Send <i class="fas fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+  <div class="footer-main">
+    <div class="footer-col">
+      <h3 class="footer-brand">Heavens Gate</h3>
+      <p>
+        Select your home or appartment and let's contact with us.<br>
+        Ask What answer you need. You can also contact us via email or phone.<br>
+        <span class="footer-quote">"Your dream home is just a click away!"</span>
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Properties</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <p>
+       34 awka road Onitsha Onitsha<br>
+        +234 706 7499 806<br>
+       paschalugochukwu16@gmail.com
+      </p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="footer-copy">
+    Copyright © Heavensgate. All Rights Reserved.
+  </div>
+</footer>
+
+
+
+
+    
+  <script src="../JS/owncaro.js"></script>
+
+     <script src="../JS/app.js"></script>
+
+ <!-- jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <!-- Owl Carousel JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+ <!-- Carousel Initialization -->
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+</html>

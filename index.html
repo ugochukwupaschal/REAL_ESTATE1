@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Asset/css/style.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="./asset/font-awesome/css/all.min.css">
+    <!-- boot link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- boot link end-->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+/>
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+/>
+     <!-- google font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap" rel="stylesheet">
+     <!-- google font ends -->
+<!-- carousel link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<!-- carousel link end-->
+    <!-- boot css -->
+
+<!-- inter font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<!-- inter font end -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Owl Carousel CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+     
+     <!-- jQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!-- Owl Carousel JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+     
+    <title>Home-real estate</title>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="logo">
+<h3 class="logotext">Heaven Gate</h3>
+        </div>
+       
+       <div class="logsign">
+        <div class="lohin">
+            <a href="./asset/HTML/login.html">Login</a>
+        </div>
+        <div class="signin">
+            <a href="./asset/HTML/signup.html">sign up</a>
+        </div>
+       </div>
+       <span onclick="openNav()" class="cs">MENU</span>
+    </header>
+    <nav class="floating-navbar">
+        <a href="./index.html" class="floatnavlink" > <span class="icon"><i class="fas fa-home"></i></span>Home</a>
+        <a href="./asset/HTML/about.html" class="floatnavlink"><span class="icon"><i class="fas fa-info-circle"></i></span>About</a>
+        <a href="./asset/HTML/property.html" class="floatnavlink"><span class="icon"><i class="fas fa-building"></i></span>Property</a>
+        <a href="./asset/HTML/contact.html" class="floatnavlink"><span class="icon"><i class="fas fa fa-phone "></i></span>Contact</a>
+    </nav>
+
+
+<!-- tab mode -->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="./index.html">Home</a>
+    <a href="./asset/HTML/about.html">About</a>
+    <a href="./asset/HTML/property.html">Property</a>
+    <a href="./asset/HTML/contact.html">Contact</a>
+  </div>
+  
+  <!-- Use any element to open the sidenav -->
+  
+<div class="carousel">
+    <video class="video active" src="./asset/images/caro1.mp4" muted loop playsinline></video>
+    <video class="video" src="./asset/images/caro2.mp4" muted loop playsinline></video>
+    <video class="video" src="./asset/images/caro3.mp4" muted loop playsinline></video>
+    <div class="carousel-text">
+        <h2>“Stop Searching. Start Living — At Heaven Gate.”</h2>
+        <p>Discover a curated selection of luxurious homes, smart investments, and commercial spaces. From modern family homes to urban condos and business hubs, we help you find more than property — we help you find a place that truly feels like home.</p>
+    </div>
+</div>
+
+
+<style>
+  /* Reset & base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+ 
+  h1 {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+
+  /* Container for cards */
+  .properties-container {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 24px;
+  }
+
+  /* Individual card */
+  .property-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .property-card:hover,
+  .property-card:focus {
+    outline: none;
+    transform: translateY(-6px);
+    box-shadow: 0 14px 25px rgba(0,0,0,0.15);
+  }
+  .property-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+  }
+  .property-info {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .property-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 8px;
+    flex-grow: 1;
+  }
+  .property-price {
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .property-location {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+
+  /* Modal overlay */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* Modal content */
+  .modal {
+    background: #fff;
+    border-radius: 14px;
+    max-width: 900px;
+    width: 90%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    transform: scale(0.7);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease;
+  }
+  .modal.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* Modal header */
+  .modal-header {
+    position: relative;
+    padding: 20px 30px;
+    background: #34495e;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .modal-close-btn {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1;
+    transition: color 0.2s ease;
+  }
+  .modal-close-btn:hover,
+  .modal-close-btn:focus {
+    color: #27ae60;
+    outline: none;
+  }
+
+  /* Modal body */
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 20px 30px;
+    gap: 16px;
+  }
+  @media (min-width: 720px) {
+    .modal-body {
+      flex-direction: row;
+    }
+  }
+
+  /* Image */
+  .modal-image-container {
+    flex: 1 1 45%;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .modal-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Info */
+  .modal-info {
+    flex: 1 1 55%;
+    padding-left: 0;
+  }
+  @media (min-width: 720px) {
+    .modal-info {
+      padding-left: 24px;
+    }
+  }
+
+  .modal-info p.description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  .modal-info ul.features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    gap: 10px;
+  }
+  .modal-info ul.features li {
+    background: #27ae60;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* Modal footer */
+  .modal-footer {
+    padding: 16px 30px 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    border-top: 1px solid #ddd;
+  }
+  .btn {
+    padding: 10px 18px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.25s ease;
+  }
+  .btn-primary {
+    background-color: #27ae60;
+    color: white;
+  }
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #1e874b;
+    outline: none;
+  }
+  .btn-secondary {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+  }
+  .btn-secondary:hover,
+  .btn-secondary:focus {
+    background-color: #95a5a6;
+    outline: none;
+  }
+
+  /* Scrollbar for modal body */
+  .modal-body::-webkit-scrollbar {
+    width: 8px;
+  }
+  .modal-body::-webkit-scrollbar-thumb {
+    background: #27ae60;
+    border-radius: 4px;
+  }
+
+</style>
+
+
+<h1>Featured Properties</h1>
+
+<div class="properties-container" role="list" aria-label="Featured properties">
+  <!-- Cards will be inserted here by JS -->
+</div>
+
+
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1" hidden>
+  <div class="modal" role="document">
+    <header class="modal-header">
+      <h2 id="modalTitle">Property Title</h2>
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+    </header>
+    <section class="modal-body">
+      <div class="modal-image-container">
+        <img src="" alt="" id="modalImage" />
+      </div>
+      <div class="modal-info">
+        <p class="description" id="modalDesc">Description goes here...</p>
+        <ul class="features" id="modalFeatures"></ul>
+      </div>
+    </section>
+    <footer class="modal-footer">
+      <button class="btn btn-secondary" id="btnContact">Contact Agent</button>
+      <button class="btn btn-primary" id="btnSchedule">Schedule Tour</button>
+    </footer>
+  </div>
+</div>
+
+<script>
+  // Sample data
+  const properties = [
+    {
+      title: "Modern Urban Loft",
+      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop&q=80",
+      description: "A stylish loft in the heart of the city with open-plan living and fantastic city views.",
+      features: ["3 Bedrooms", "2 Bathrooms", "Open Kitchen", "City View", "Balcony"],
+      price: "$2,500 / month",
+      location: "Downtown, NY"
+    },
+    {
+      title: "Luxury Penthouse",
+      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop&q=80",
+      description: "Spacious penthouse with premium finishes, private terrace, and stunning skyline views.",
+      features: ["4 Bedrooms", "3 Bathrooms", "Private Terrace", "Smart Home", "Gym Access"],
+      price: "$8,500 / month",
+      location: "Manhattan, NY"
+    },
+    {
+      title: "Family Villa",
+      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop&q=80",
+      description: "A beautiful family villa with garden, pool, and ample space for kids to play.",
+      features: ["5 Bedrooms", "4 Bathrooms", "Swimming Pool", "Garden", "Garage"],
+      price: "$1,850,000",
+      location: "Beverly Hills, CA"
+    },
+    {
+      title: "Downtown Studio",
+      image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop&q=80",
+      description: "Compact and modern studio apartment located close to all major amenities.",
+      features: ["1 Bedroom", "1 Bathroom", "Gym Access", "Laundry", "Parking"],
+      price: "$1,200 / month",
+      location: "Chicago, IL"
+    },
+    {
+      title: "Cozy Cottage",
+      image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop&q=80",
+      description: "Charming cottage with rustic feel, fireplace, and a lovely private backyard.",
+      features: ["2 Bedrooms", "2 Bathrooms", "Fireplace", "Backyard", "Quiet Neighborhood"],
+      price: "$675,000",
+      location: "Asheville, NC"
+    }
+  ];
+
+  // Reference elements
+  const container = document.querySelector('.properties-container');
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modal = modalOverlay.querySelector('.modal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalImage = document.getElementById('modalImage');
+  const modalDesc = document.getElementById('modalDesc');
+  const modalFeatures = document.getElementById('modalFeatures');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+  const btnContact = document.getElementById('btnContact');
+  const btnSchedule = document.getElementById('btnSchedule');
+
+  // Helper to create a card
+  function createCard(property, index) {
+    const card = document.createElement('article');
+    card.className = 'property-card';
+    card.tabIndex = 0;
+    card.setAttribute('role', 'listitem');
+    card.setAttribute('aria-label', `${property.title}, ${property.price}, located in ${property.location}`);
+
+    card.innerHTML = `
+      <img src="${property.image}" alt="${property.title}" loading="lazy" />
+      <div class="property-info">
+        <div class="property-title">${property.title}</div>
+        <div class="property-price">${property.price}</div>
+        <div class="property-location">${property.location}</div>
+      </div>
+    `;
+
+    card.addEventListener('click', () => openModal(index));
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(index);
+      }
+    });
+
+    return card;
+  }
+
+  // Open modal with property data
+  function openModal(index) {
+    const property = properties[index];
+    modalTitle.textContent = property.title;
+    modalImage.src = property.image;
+    modalImage.alt = property.title;
+    modalDesc.textContent = property.description;
+
+    modalFeatures.innerHTML = '';
+    property.features.forEach(feature => {
+      const li = document.createElement('li');
+      li.textContent = feature;
+      modalFeatures.appendChild(li);
+    });
+
+    modalOverlay.hidden = false;
+    modalOverlay.classList.add('active');
+    modal.classList.add('active');
+
+    // Trap focus inside modal
+    lastFocusedElement = document.activeElement;
+    modalCloseBtn.focus();
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Close modal
+  function closeModal() {
+    modalOverlay.classList.remove('active');
+    modal.classList.remove('active');
+    modalOverlay.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+  }
+
+  // Click outside modal closes it
+  modalOverlay.addEventListener('click', e => {
+    if (e.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  // Close button
+  modalCloseBtn.addEventListener('click', closeModal);
+
+  // Keyboard ESC key to close modal
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  // Keep track of last focused element before modal opened
+  let lastFocusedElement = null;
+
+  // Populate cards on load
+  properties.forEach((property, idx) => {
+    container.appendChild(createCard(property, idx));
+  });
+
+  // Contact and Schedule buttons (just alert here, can be replaced with actual actions)
+  btnContact.addEventListener('click', () => alert('Contact agent functionality goes here.'));
+  btnSchedule.addEventListener('click', () => alert('Schedule tour functionality goes here.'));
+
+</script>
+
+
+<!-- featured product -->
+
+
+<!-- we are -->
+
+<section class="services">
+  <h3 class="services-subtitle">Our Service</h3>
+  <h2 class="services-title">What We Do?</h2>
+  <div class="services-list">
+    <div class="service-card">
+      <span class="service-icon"><i class="fas fa-home"></i></span>
+      <h4 class="service-heading">Buy A New Home</h4>
+      <p class="service-desc">
+        Discover your dream home effortlessly.<br>
+        Explore diverse properties and expert guidance for a seamless buying experience.
+        <a href="#" class="service-link">Learn More</a>
+      </p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon"><i class="fas fa-house-user"></i></span>
+      <h4 class="service-heading">Rent A Home</h4>
+      <p class="service-desc">
+        Discover your perfect rental effortlessly.<br>
+        Explore a diverse variety of listings tailored precisely to suit your unique lifestyle needs.
+        <a href="#" class="service-link">Learn More</a>
+      </p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon"><i class="fas fa-map-marker-alt"></i></span>
+      <h4 class="service-heading">Buy A Land</h4>
+      <p class="service-desc">
+        Find the perfect land for your next project.<br>
+        Explore a variety of plots in prime locations with expert support.
+        <a href="#" class="service-link">Learn More</a>
+      </p>
+    </div>
+  </div>
+</section>
+<section class="stats-section">
+  <div class="stats-list">
+    <div class="stat-card">
+      <span class="stat-number">71</span>
+      <span class="stat-label">Satisfied<br>Customer</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">10</span>
+      <span class="stat-label">Award<br>Received</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">80</span>
+      <span class="stat-label">Successful<br>Transaction</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">41</span>
+      <span class="stat-label">Monthly<br>Traffic</span>
+    </div>
+  </div>
+</section>
+<!-- we are -->
+
+<!-- location for you -->
+ <!-- <section class="locations-section">
+  <h3 class="locations-subtitle">Our Locations</h3>
+  <h2 class="locations-title">For You</h2>
+  <div class="carousel-wrapper">
+    <div class="locations-carousel" id="locationsCarousel">
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Europe">
+        <div class="location-overlay">
+          <a href=""><span class="location-count">120 Properties</span></a>
+          <span class="location-name">Europe</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Gerald Avenue">
+        <div class="location-overlay">
+          <span class="location-count">85 Properties</span>
+          <span class="location-name">Gerald Avenue</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Lagos">
+        <div class="location-overlay">
+          <a href=""><span class="location-count">200 Properties</span></a>
+          <span class="location-name">Lagos</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Brookeline">
+        <div class="location-overlay">
+        <a href="">  <span class="location-count">67 Properties</span></a>
+          <span class="location-name">Brookeline</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=400&q=80" alt="Spain">
+        <div class="location-overlay">
+          <a href=""><span class="location-count">143 Properties</span></a>
+          <span class="location-name">Spain</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80" alt="Paris">
+        <div class="location-overlay">
+          <span class="location-count">99 Properties</span>
+          <span class="location-name">Paris</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1465156799763-2c087c332922?auto=format&fit=crop&w=400&q=80" alt="Dubai">
+        <div class="location-overlay">
+          <span class="location-count">178 Properties</span>
+          <span class="location-name">Dubai</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <img src="https://images.unsplash.com/photo-1465447142348-e9952c393450?auto=format&fit=crop&w=400&q=80" alt="New York">
+        <div class="location-overlay">
+          <span class="location-count">210 Properties</span>
+          <span class="location-name">New York</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- location for you -->
+
+
+
+  <!-- Owl Carousel CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+  />
+  <!-- Custom Styles -->
+  <style>
+    
+    .carousel-header {
+      margin-top: 100px;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      /* color: #333; */
+      text-align: center;
+    }
+    .owl-carousel {
+      max-width: 100%;
+      margin: 0 auto;
+      margin-bottom: 70px;
+    }
+    .owl-carousel .item {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 0 10px;
+      width: 100%;
+    }
+    .owl-carousel .item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .app-info {
+      padding: 10px;
+      text-align: center;
+    }
+    .app-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 4px;
+    }
+    .app-subtext {
+      font-size: 14px;
+      color: #666;
+    }
+    .owl-nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next {
+      background: #ddd;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      font-size: 16px;
+      margin: 0 5px;
+    }
+    .locationed{
+      font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: #34495e;
+    }
+ .dfgt{
+  font-family: 'Lobster', cursive;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: darkolivegreen;
+ }
+  </style>
+</head>
+<body>
+  <div class="carousel-header">
+    <h4 class="locationed">Our Locations</h4>
+    <p class="dfgt">for you</p>
+  </div>
+
+  <div id="owl-demo" class="owl-carousel owl-theme">
+    <div class="item">
+      <img src="./asset/images/abia.jpg" alt="Abia" />
+      <div class="app-info">
+        <div class="app-title">Abia Real Estate</div>
+        <div class="app-subtext">201 Properties</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./asset/images/edac80e2-1372-4f6d-92ad-65271233e112.jpeg" alt="Lagos" />
+      <div class="app-info">
+        <div class="app-title">Lagos Apartments</div>
+        <div class="app-subtext">342 Properties</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./asset/images/Durban Harbour, Durban, KwaZulu-Natal, South….jpeg" alt="Enugu" />
+      <div class="app-info">
+        <div class="app-title">Enugu Estates</div>
+        <div class="app-subtext">185 Properties</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./asset/images/88 on Field, Durban, South Africa_ 482 ft. 26…" alt="Abuja" />
+      <div class="app-info">
+        <div class="app-title">Abuja Homes</div>
+        <div class="app-subtext">290 Properties</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./asset/images/Moscow, Russia_.jpeg" alt="Kano" />
+      <div class="app-info">
+        <div class="app-title">Kano Properties</div>
+        <div class="app-subtext">173 Properties</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./asset/images/d92ce127-0107-4e26-ba92-677d77f42283.jpeg" alt="PH" />
+      <div class="app-info">
+        <div class="app-title">Port Harcourt Rentals</div>
+        <div class="app-subtext">260 Properties</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./asset/images/Skyscrapers of business center Moscow-City are a….jpeg" alt="Ibadan" />
+      <div class="app-info">
+        <div class="app-title">Ibadan Real Estate</div>
+        <div class="app-subtext">212 Properties</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./asset/images/1079d9c4-f499-4cbf-945b-acf0c04107fc.jpeg" alt="Russia" />
+      <div class="app-info">
+        <div class="app-title">Russia Listings</div>
+        <div class="app-subtext">201 Properties</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./asset/images/c1540914-5ca4-4c3d-8f3f-b9bad700a47a.jpeg" alt="UK" />
+      <div class="app-info">
+        <div class="app-title">UK Homes</div>
+        <div class="app-subtext">201 Properties</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="./asset/images/a0727aec-e4c6-4c50-b221-6de90fac3a92.jpeg" alt="New York" />
+      <div class="app-info">
+        <div class="app-title">New York Estates</div>
+        <div class="app-subtext">402 Properties</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Carousel Initialization -->
+  <script>
+    $(document).ready(function () {
+      $('#owl-demo').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        smartSpeed: 10800,
+        responsive: {
+          0: { items: 1 },
+          600: { items: 2 },
+          1000: { items: 3 }
+        }
+      });
+    });
+  </script>
+
+
+
+
+<div class="container">
+  <h2 class="section-title">Why Choose</h2>
+  <h1 class="main-title">Heaven Gate?</h1>
+  
+  <div class="features-grid">
+      <div class="feature-card">
+          <div class="feature-icon">
+              👥
+          </div>
+          <h3 class="feature-title">Proven Expertise</h3>
+          <p class="feature-description">
+              Our seasoned team excels in real estate with years of successful market navigation, offering informed decisions and optimal results.
+          </p>
+      </div>
+      
+      <div class="feature-card">
+          <div class="feature-icon">
+              🎧
+          </div>
+          <h3 class="feature-title">Customized Solutions</h3>
+          <p class="feature-description">
+              We pride ourselves on crafting personalized strategies to match your unique goals, ensuring a seamless real estate journey.
+          </p>
+      </div>
+      
+      <div class="feature-card">
+          <div class="feature-icon">
+              🤝
+          </div>
+          <h3 class="feature-title">Transparent Partnerships</h3>
+          <p class="feature-description">
+              Transparency is key in our client relationships. We prioritize clear communication and ethical practices, fostering trust and reliability throughout.
+          </p>
+      </div>
+  </div>
+</div>
+<div class="watermark">Mekas real estate</div>
+
+    <!-- script -->
+
+    
+    <div class="container">
+      <h2 class="section-title">Customers</h2>
+      <h1 class="main-title">Reviews</h1>
+      
+      <div class="reviews-container owl-carousel" id="owl-demos">
+          <div class="review-card">
+              <div class="stars">★★★★☆</div>
+              <p class="review-text">
+                  Working with this team was absolutely incredible. They helped us find our dream home in just three weeks! Their market knowledge and negotiation skills saved us over £15,000. I can't recommend them enough for anyone looking to buy or sell.
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">LM</div>
+                  <div class="reviewer-details">
+                      <h4>Luna Mendez</h4>
+                      <p>First-time Homebuyer</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">
+                  After struggling to sell our home for 6 months with another agent, we switched to this team and had multiple offers within two weeks. The marketing strategy and staging advice made all the difference. Professional and results-driven!
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">AO</div>
+                  <div class="reviewer-details">
+                      <h4>Abuchi Okafor</h4>
+                      <p>Marketer</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">
+                  From start to finish, the process was seamless. They guided us through every step of our investment property purchase, providing invaluable market insights. Their attention to detail and proactive communication exceeded our expectations.
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">SM</div>
+                  <div class="reviewer-details">
+                      <h4>Sarah Mitchell</h4>
+                      <p>Property Investor</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="review-card">
+              <div class="stars">★★★★☆</div>
+              <p class="review-text">
+                  Outstanding service! They understood our specific needs for a family home and showed us properties that perfectly matched our criteria. The whole team was supportive, knowledgeable, and made buying our first home stress-free.
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">DJ</div>
+                  <div class="reviewer-details">
+                      <h4>David Johnson</h4>
+                      <p>Engineer</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">
+                  I was relocating for work and needed to find a home quickly. Heaven Gate made it happen! They arranged virtual tours, handled all the paperwork remotely, and I closed on my perfect home without any complications. Truly exceptional service.
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">EP</div>
+                  <div class="reviewer-details">
+                      <h4>Emma Parker</h4>
+                      <p>Consultant</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">
+                  Their expertise in luxury properties is unmatched. They helped us sell our estate at above asking price and found us an even better home. The personalized approach and market knowledge made all the difference in our success.
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">RC</div>
+                  <div class="reviewer-details">
+                      <h4>Robert Chen</h4>
+                      <p>Business Owner</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="review-card">
+              <div class="stars">★★★★☆</div>
+              <p class="review-text">
+                  As first-time sellers, we were nervous about the process. The team walked us through everything, provided excellent staging advice, and our home sold in just 10 days. Their professionalism and expertise gave us confidence throughout.
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">MR</div>
+                  <div class="reviewer-details">
+                      <h4>Maria Rodriguez</h4>
+                      <p>Teacher</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">
+                  Heaven Gate helped us navigate a complex commercial property acquisition. Their understanding of zoning laws, financing options, and market trends was invaluable. They made what could have been a nightmare into a smooth transaction.
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">TW</div>
+                  <div class="reviewer-details">
+                      <h4>Thomas Wilson</h4>
+                      <p>Restaurant Owner</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">
+                  Moving internationally seemed impossible until we found this team. They coordinated with overseas lawyers, handled currency exchanges, and made our dream of owning property abroad a reality. Truly global expertise and service!
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">AL</div>
+                  <div class="reviewer-details">
+                      <h4>Anna Lewis</h4>
+                      <p>Digital Nomad</p>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="review-card">
+              <div class="stars">★★★★☆</div>
+              <p class="review-text">
+                  Their innovative use of technology, including virtual reality tours and drone photography, set them apart from other agents. We could explore properties remotely and make informed decisions quickly. Modern real estate at its finest!
+              </p>
+              <div class="reviewer-info">
+                  <div class="reviewer-avatar">KT</div>
+                  <div class="reviewer-details">
+                      <h4>Kevin Thompson</h4>
+                      <p>Tech Executive</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+<!-- form -->
+
+
+<div class="container">
+  <div class="content-wrapper">
+      <div class="left-section">
+          <h2 class="section-title">Get In Touch</h2>
+          <h1 class="main-title">How We Can Help You?</h1>
+          <p class="description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+          </p>
+          
+          <div class="contact-info">
+              <div class="contact-item">
+                  <div class="contact-icon">📍</div>
+                  <div class="contact-details">
+                      <h4>Headquarters</h4>
+                      <p>34 Awka Road Onithsa</p>
+                  </div>
+              </div>
+              
+              <div class="contact-item">
+                  <div class="contact-icon">📞</div>
+                  <div class="contact-details">
+                      <h4>General Inquiries</h4>
+                      <p>+234 706 7489 806</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="form-section">
+          <form id="contactForm">
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="firstName">First Name</label>
+                      <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                  </div>
+              </div>
+              
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="phone">Phone</label>
+                      <input type="tel" id="phone" name="phone" placeholder="Phone">
+                  </div>
+              </div>
+              
+              <div class="form-row">
+                  <div class="form-group full-width">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" placeholder="Message" required></textarea>
+                  </div>
+              </div>
+              
+              <button type="submit" class="submit-btn">Submit</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+<!-- footer -->
+<footer class="footer-section">
+  <div class="footer-main">
+    <div class="footer-col">
+      <h3 class="footer-brand">Heavens Gate</h3>
+      <p>
+        Select your home or appartment and let's contact with us.<br>
+        Ask What answer you need. You can also contact us via email or phone.<br>
+        <span class="footer-quote">"Your dream home is just a click away!"</span>
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Properties</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <p>
+       34 awka road Onitsha Onitsha<br>
+        +234 706 7499 806<br>
+       paschalugochukwu16@gmail.com
+      </p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="footer-copy">
+    Copyright © Heavensgate. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- footer ends -->
+  <script src="./asset/JS/app.js"></script>
+
+     <script src="./asset/JS/owncaro.js"></script>
+
+ <!-- jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <!-- Owl Carousel JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+ <!-- Carousel Initialization -->
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+</html>
